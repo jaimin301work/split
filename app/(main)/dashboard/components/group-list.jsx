@@ -44,7 +44,7 @@ export function GroupList({ groups }) {
                   balance > 0 ? "text-green-600" : "text-red-600"
                 }`}
               >
-                {balance > 0 ? "+" : ""}${balance.toFixed(2)}
+                {balance > 0 ? "+" : ""}₹{balance.toFixed(2)}
               </span>
             )}
           </Link>
