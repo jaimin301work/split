@@ -69,7 +69,7 @@ export default function Dashboard() {
                 <div className="text-2xl font-bold">
                   {balances?.totalBalance > 0 ? (
                     <span className="text-green-600">
-                      +${balances?.totalBalance.toFixed(2)}
+                      +₹{balances?.totalBalance.toFixed(2)}
                     </span>
                   ) : balances?.totalBalance < 0 ? (
                     <span className="text-red-600">
