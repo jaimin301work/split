@@ -211,7 +211,7 @@ export function SplitSelector({
                   className="w-16 h-8"
                 />
                 <span className="text-sm text-muted-foreground">%</span>
-                <span className="text-sm ml-1">${split.amount.toFixed(2)}</span>
+                <span className="text-sm ml-1">₹{split.amount.toFixed(2)}</span>
               </div>
             </div>
           )}
@@ -246,13 +246,13 @@ export function SplitSelector({
         <span className="font-medium">Total</span>
         <div className="text-right">
           <span
-            className={`font-medium ${!isAmountValid ? "text-amber-600" : ""}`}
+            className={`font-medium ₹{!isAmountValid ? "text-amber-600" : ""}`}
           >
             ${totalAmount.toFixed(2)}
           </span>
           {type !== "equal" && (
             <span
-              className={`text-sm ml-2 ${!isPercentageValid ? "text-amber-600" : ""}`}
+              className={`text-sm ml-2 ₹{!isPercentageValid ? "text-amber-600" : ""}`}
             >
               ({totalPercentage.toFixed(1)}%)
             </span>
@@ -270,7 +270,7 @@ export function SplitSelector({
       {type === "exact" && !isAmountValid && (
         <div className="text-sm text-amber-600 mt-2">
           The sum of all splits (${totalAmount.toFixed(2)}) should equal the
-          total amount (${amount.toFixed(2)}).
+          total amount (₹{amount.toFixed(2)}).
         </div>
       )}
     </div>
